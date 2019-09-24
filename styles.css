@@ -1,0 +1,75 @@
+body {
+    font-size: 1.124em;
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.columns {
+    display: flex;
+    margin: 1em 0;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.col-1 {
+    width: 20%;
+}
+
+.col-2 {
+    width: 45%;
+}
+
+.col-3 {
+    width: 70%;
+}
+
+.col-bg {
+    background: #212614;
+    color: #fff;
+    padding: 1em;
+}
+
+@media (min-width: 700px) {
+    body {
+        background: teal;
+    }
+}
+
+/* media query that comes later will take precendence, so
+don't want ot switch the media queries for 700px and 850px.
+Otherwise, we'll only ever see a teal background whenever
+screen is at least 700px wide */
+
+@media (min-width: 850px) {
+    body {
+        background: orange;
+    }
+}
+
+@media (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3 {
+        width: 100%;
+    }
+}
